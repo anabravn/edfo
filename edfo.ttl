@@ -90,55 +90,6 @@
                                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_1bda7eb6_fd81_4a62_b3a8_d52d60aa4ee6
-:OWLClass_1bda7eb6_fd81_4a62_b3a8_d52d60aa4ee6 rdf:type owl:Class ;
-                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Spyware"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_73243322_2f3f_4f1f_8876_ca6df8ffa62b
-:OWLClass_73243322_2f3f_4f1f_8876_ca6df8ffa62b rdf:type owl:Class ;
-                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Ransomware"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_b5b6093d_ef3e_470b_a615_717f8c275185
-:OWLClass_b5b6093d_ef3e_470b_a615_717f8c275185 rdf:type owl:Class ;
-                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Virus"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_d75f1170_03ac_4f4b_9afd_70f084f58679
-:OWLClass_d75f1170_03ac_4f4b_9afd_70f084f58679 rdf:type owl:Class ;
-                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Rootkit"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_e974b085_ab89_4957_8980_fd3eb7e719d1
-:OWLClass_e974b085_ab89_4957_8980_fd3eb7e719d1 rdf:type owl:Class ;
-                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Adware"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ecde6f7a_85ba_470d_8a1e_ecbd49719069
-:OWLClass_ecde6f7a_85ba_470d_8a1e_ecbd49719069 rdf:type owl:Class ;
-                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Trojan"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_f1775261_1359_4aa2_9a3a_aa5285bcf8de
-:OWLClass_f1775261_1359_4aa2_9a3a_aa5285bcf8de rdf:type owl:Class ;
-                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Worm"@en .
-
-
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa
 :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_e5e12005_20bb_434a_b578_fda8b8614359 ;
@@ -204,6 +155,13 @@
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Computer> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Processing Unit"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_1bda7eb6_fd81_4a62_b3a8_d52d60aa4ee6
+:OWLClass_1bda7eb6_fd81_4a62_b3a8_d52d60aa4ee6 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Spyware"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_1f5fee26_0ce1_4aa0_be58_aa48fca2b42e
@@ -380,6 +338,13 @@
                                                rdfs:label "Peripheral Device"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_73243322_2f3f_4f1f_8876_ca6df8ffa62b
+:OWLClass_73243322_2f3f_4f1f_8876_ca6df8ffa62b rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Ransomware"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_764a1446_8e06_49f1_872a_1edf9a8d5238
 :OWLClass_764a1446_8e06_49f1_872a_1edf9a8d5238 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466 ;
@@ -546,6 +511,13 @@
                                                rdfs:label "Cache Memory"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_b5b6093d_ef3e_470b_a615_717f8c275185
+:OWLClass_b5b6093d_ef3e_470b_a615_717f8c275185 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Virus"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ca505c5c_324a_4b83_90c7_31789b96322e
 :OWLClass_ca505c5c_324a_4b83_90c7_31789b96322e rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_953402eb_02bb_4674_8040_9fa78fb631d2 ;
@@ -592,6 +564,13 @@
                                                rdfs:subClassOf :OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Image File Format"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_d75f1170_03ac_4f4b_9afd_70f084f58679
+:OWLClass_d75f1170_03ac_4f4b_9afd_70f084f58679 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Rootkit"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_d80871b6_bc94_4340_a5a8_f38a86b24fff
@@ -652,6 +631,27 @@
                                                rdfs:label "Video File"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_e974b085_ab89_4957_8980_fd3eb7e719d1
+:OWLClass_e974b085_ab89_4957_8980_fd3eb7e719d1 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Adware"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ecde6f7a_85ba_470d_8a1e_ecbd49719069
+:OWLClass_ecde6f7a_85ba_470d_8a1e_ecbd49719069 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Trojan"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_f1775261_1359_4aa2_9a3a_aa5285bcf8de
+:OWLClass_f1775261_1359_4aa2_9a3a_aa5285bcf8de rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Worm"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_f874e889_ef71_4ac3_86c3_ae8f4c0ec416
 :OWLClass_f874e889_ef71_4ac3_86c3_ae8f4c0ec416 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5 ;
@@ -685,6 +685,15 @@
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_51ef52d4_b4cd_4316_a6ba_69ae1e1e1a98
+:OWLNamedIndividual_51ef52d4_b4cd_4316_a6ba_69ae1e1e1a98 rdf:type owl:NamedIndividual ,
+                                                                  :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
+                                                         <http://purl.obolibrary.org/obo/BFO_0000115> :OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7 ,
+                                                                                                      :OWLNamedIndividual_ebdf5913_54d0_4a47_97ff_7f11b7813061 ;
+                                                         <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                                         rdfs:label "Python"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_423c7cc6_0feb_48c6_90b4_bcafd06d7831
 :OWLNamedIndividual_423c7cc6_0feb_48c6_90b4_bcafd06d7831 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
@@ -703,7 +712,7 @@
 :OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                                         rdfs:label "Python"@en .
+                                                         rdfs:label "Python 2"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_73f346b5_9c89_4409_a026_37c641a9ab7a
@@ -753,6 +762,14 @@
                                                                   :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "C++"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_ebdf5913_54d0_4a47_97ff_7f11b7813061
+:OWLNamedIndividual_ebdf5913_54d0_4a47_97ff_7f11b7813061 rdf:type owl:NamedIndividual ,
+                                                                  :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
+                                                         <http://www.ontologyrepository.com/CommonCoreOntologies/is_successor_of> :OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7 ;
+                                                         <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                                         rdfs:label "Python 3"@en .
 
 
 #################################################################
