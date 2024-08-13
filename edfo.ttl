@@ -8,7 +8,9 @@
 
 <http://www.semanticweb.org/ana/ontologies/2024/7/edfo> rdf:type owl:Ontology ;
                                                          owl:versionIRI <http://www.semanticweb.org/ana/ontologies/2024/7/edfo/0.1> ;
-                                                         owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-02-14/AllCoreOntology> ;
+                                                         owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-02-14/AgentOntology> ,
+                                                                     <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-02-14/ArtifactOntology> ,
+                                                                     <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-02-14/InformationEntityOntology> ;
                                                          rdfs:label "Experimental Digital Forensics Ontology"@en ,
                                                                     "Ontologia para Forense Digital Experimental"@pt-br .
 
@@ -24,7 +26,7 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72
 :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 rdf:type owl:ObjectProperty ;
                                                         rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/prescribed_by> ;
                                                         owl:inverseOf :OWLObjectProperty_8eb5a79b_922a_4946_92de_a23df82725c0 ;
@@ -34,30 +36,110 @@
                                                         rdfs:label "uses format"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLObjectProperty_8eb5a79b_922a_4946_92de_a23df82725c0
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLObjectProperty_7f4c87f3_dda2_4a6e_8235_0e52d678a274
+:OWLObjectProperty_7f4c87f3_dda2_4a6e_8235_0e52d678a274 rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000171> ;
+                                                        owl:inverseOf :OWLObjectProperty_da530bfc_4e50_4b45_922a_9da5c3539390 ;
+                                                        rdf:type owl:TransitiveProperty ;
+                                                        <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                                        rdfs:label "digitally located in"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLObjectProperty_8eb5a79b_922a_4946_92de_a23df82725c0
 :OWLObjectProperty_8eb5a79b_922a_4946_92de_a23df82725c0 rdf:type owl:ObjectProperty ;
                                                         rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/prescribes> ;
                                                         <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                         rdfs:label "format used in"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLObjectProperty_da530bfc_4e50_4b45_922a_9da5c3539390
+:OWLObjectProperty_da530bfc_4e50_4b45_922a_9da5c3539390 rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000124> ;
+                                                        <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                                        rdfs:label "digital location of"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> rdf:type owl:Class .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Chart
-<http://www.ontologyrepository.com/CommonCoreOntologies/Chart> rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Image> .
+<http://www.ontologyrepository.com/CommonCoreOntologies/Chart> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Image> .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Image
-<http://www.ontologyrepository.com/CommonCoreOntologies/Image> rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> .
+<http://www.ontologyrepository.com/CommonCoreOntologies/Image> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Objective
+<http://www.ontologyrepository.com/CommonCoreOntologies/Objective> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PlanSpecification
+<http://www.ontologyrepository.com/CommonCoreOntologies/PlanSpecification> rdf:type owl:Class .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Video
-<http://www.ontologyrepository.com/CommonCoreOntologies/Video> rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> .
+<http://www.ontologyrepository.com/CommonCoreOntologies/Video> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_1bda7eb6_fd81_4a62_b3a8_d52d60aa4ee6
+:OWLClass_1bda7eb6_fd81_4a62_b3a8_d52d60aa4ee6 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Spyware"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_73243322_2f3f_4f1f_8876_ca6df8ffa62b
+:OWLClass_73243322_2f3f_4f1f_8876_ca6df8ffa62b rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Ransomware"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_b5b6093d_ef3e_470b_a615_717f8c275185
+:OWLClass_b5b6093d_ef3e_470b_a615_717f8c275185 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Virus"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_d75f1170_03ac_4f4b_9afd_70f084f58679
+:OWLClass_d75f1170_03ac_4f4b_9afd_70f084f58679 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Rootkit"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_e974b085_ab89_4957_8980_fd3eb7e719d1
+:OWLClass_e974b085_ab89_4957_8980_fd3eb7e719d1 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Adware"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ecde6f7a_85ba_470d_8a1e_ecbd49719069
+:OWLClass_ecde6f7a_85ba_470d_8a1e_ecbd49719069 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Trojan"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_f1775261_1359_4aa2_9a3a_aa5285bcf8de
+:OWLClass_f1775261_1359_4aa2_9a3a_aa5285bcf8de rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Worm"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa
 :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_e5e12005_20bb_434a_b578_fda8b8614359 ;
                                                owl:disjointWith :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
@@ -65,7 +147,7 @@
                                                rdfs:label "Interpreted Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_0a5fa281_7520_4b8b_adb3_4ad579daa62d
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0a5fa281_7520_4b8b_adb3_4ad579daa62d
 :OWLClass_0a5fa281_7520_4b8b_adb3_4ad579daa62d rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_1ad5bf07_a598_4687_86c7_b312a0d07ebc ;
                                                owl:disjointWith :OWLClass_d80871b6_bc94_4340_a5a8_f38a86b24fff ;
@@ -73,14 +155,14 @@
                                                rdfs:label "Central Processing Unit"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_0c19d2d5_b5d4_4de2_bb14_504562d4ffb4
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0c19d2d5_b5d4_4de2_bb14_504562d4ffb4
 :OWLClass_0c19d2d5_b5d4_4de2_bb14_504562d4ffb4 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_728b5b21_6739_4c48_9f07_0f496a4b9d3b ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Input Device"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_0d411739_d3c3_4ff1_bb25_64bfe4b21158
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0d411739_d3c3_4ff1_bb25_64bfe4b21158
 :OWLClass_0d411739_d3c3_4ff1_bb25_64bfe4b21158 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_ab30d91b_4e2f_4475_a75b_80fc2ccbf30a ;
                                                owl:disjointWith :OWLClass_80a43adc_5881_402a_9621_37b1d6cf17f5 ;
@@ -88,7 +170,7 @@
                                                rdfs:label "Markup  Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_0ffb13d1_3dc1_40f5_b17a_c339270a6b44
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0ffb13d1_3dc1_40f5_b17a_c339270a6b44
 :OWLClass_0ffb13d1_3dc1_40f5_b17a_c339270a6b44 rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Computer> ,
                                                                [ rdf:type owl:Restriction ;
@@ -104,58 +186,81 @@
                                                rdfs:label "Computer System"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_15cd4ac3_4d0c_418a_a56e_dbcdfb98e288
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_15cd4ac3_4d0c_418a_a56e_dbcdfb98e288
 :OWLClass_15cd4ac3_4d0c_418a_a56e_dbcdfb98e288 rdf:type owl:Class ;
+                                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/uses_language> ;
+                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                     owl:onClass :OWLClass_52480b4f_6793_426f_ac2b_89cb0101fd59
+                                                                   ] ;
                                                rdfs:subClassOf :OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2 ;
                                                owl:disjointWith :OWLClass_6695e411_d4b7_4504_be8c_60fe6983f16b ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Executable Code"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_1ad5bf07_a598_4687_86c7_b312a0d07ebc
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_1ad5bf07_a598_4687_86c7_b312a0d07ebc
 :OWLClass_1ad5bf07_a598_4687_86c7_b312a0d07ebc rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Computer> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Processing Unit"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_1f5fee26_0ce1_4aa0_be58_aa48fca2b42e
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_1f5fee26_0ce1_4aa0_be58_aa48fca2b42e
 :OWLClass_1f5fee26_0ce1_4aa0_be58_aa48fca2b42e rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_0c19d2d5_b5d4_4de2_bb14_504562d4ffb4 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Microphone"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_1f773bbe_ea19_44f1_a003_6943dec33427
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_1f773bbe_ea19_44f1_a003_6943dec33427
 :OWLClass_1f773bbe_ea19_44f1_a003_6943dec33427 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Solid State Drive"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72
 :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_e5e12005_20bb_434a_b578_fda8b8614359 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Compiled Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_2da515ab_d942_429d_90a4_4dc32b59c952
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_2da515ab_d942_429d_90a4_4dc32b59c952
 :OWLClass_2da515ab_d942_429d_90a4_4dc32b59c952 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Audio File Format"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_38618ae1_92a3_4573_84c4_aedad8ac072f
+:OWLClass_38618ae1_92a3_4573_84c4_aedad8ac072f rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :OWLObjectProperty_7f4c87f3_dda2_4a6e_8235_0e52d678a274 ;
+                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass :OWLClass_8a4fb032_ec8d_4608_a311_02f7fed17a0d
+                                                               ] ;
+                                               owl:disjointUnionOf ( :OWLClass_cea1f41e_2b87_465f_a256_a3e3a583a1d0
+                                                                     :OWLClass_ceef70c6_cc18_47be_b789_99f1dd4e1081
+                                                                   ) ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Directory"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2
 :OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_7b033d76_e905_4281_96d7_76c4bf6623ed ;
+                                               owl:disjointUnionOf ( :OWLClass_15cd4ac3_4d0c_418a_a56e_dbcdfb98e288
+                                                                     :OWLClass_6695e411_d4b7_4504_be8c_60fe6983f16b
+                                                                   ) ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Code"@en ,
                                                           "Código"@pt-br .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_407c2e84_ddd0_4376_8ccc_7cd3a09c46ed
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_407c2e84_ddd0_4376_8ccc_7cd3a09c46ed
 :OWLClass_407c2e84_ddd0_4376_8ccc_7cd3a09c46ed rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
@@ -163,7 +268,7 @@
                                                           "System Software"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_422c499f_a8c8_4bc3_904d_d33052f8864a
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_422c499f_a8c8_4bc3_904d_d33052f8864a
 :OWLClass_422c499f_a8c8_4bc3_904d_d33052f8864a rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 ;
@@ -178,7 +283,7 @@
                                                rdfs:label "Source Code File"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_4a25ecb2_062a_420f_9b25_ce01907d7631
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_4a25ecb2_062a_420f_9b25_ce01907d7631
 :OWLClass_4a25ecb2_062a_420f_9b25_ce01907d7631 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_0ffb13d1_3dc1_40f5_b17a_c339270a6b44 ;
                                                owl:disjointWith :OWLClass_70d7810c_bb3f_42e9_9a09_131b9fd05f38 ;
@@ -186,7 +291,7 @@
                                                rdfs:label "Laptop Computer"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_5122d666_d26a_44d3_a046_513a288015cd
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_5122d666_d26a_44d3_a046_513a288015cd
 :OWLClass_5122d666_d26a_44d3_a046_513a288015cd rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_407c2e84_ddd0_4376_8ccc_7cd3a09c46ed ;
                                                owl:disjointWith :OWLClass_5a1fc280_9582_48b3_baf5_4d2b7d6fba4f ;
@@ -195,7 +300,7 @@
                                                           "Sistema Operacional"@pt-br .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_52480b4f_6793_426f_ac2b_89cb0101fd59
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_52480b4f_6793_426f_ac2b_89cb0101fd59
 :OWLClass_52480b4f_6793_426f_ac2b_89cb0101fd59 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_999db36e_214a_4c2b_a312_d61f7af6a757 ;
                                                owl:disjointWith :OWLClass_a5b629a7_3b33_4595_abcb_0cfece8fe6c4 ;
@@ -203,7 +308,7 @@
                                                rdfs:label "Machine Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_5a1fc280_9582_48b3_baf5_4d2b7d6fba4f
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_5a1fc280_9582_48b3_baf5_4d2b7d6fba4f
 :OWLClass_5a1fc280_9582_48b3_baf5_4d2b7d6fba4f rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_407c2e84_ddd0_4376_8ccc_7cd3a09c46ed ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
@@ -211,15 +316,14 @@
                                                           "Driver de Dispositivo"@pt-br .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_63e351a2_8926_47c3_99b6_8c017f653310
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_63e351a2_8926_47c3_99b6_8c017f653310
 :OWLClass_63e351a2_8926_47c3_99b6_8c017f653310 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_0c19d2d5_b5d4_4de2_bb14_504562d4ffb4 ;
-                                               owl:disjointWith :OWLClass_dab84e9a_cdd3_4520_a426_1407b93757fb ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Mouse"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26
 :OWLClass_65ab41f7_d000_48f6_8337_daa9d3432f26 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
@@ -227,14 +331,19 @@
                                                           "Software Malicioso"@pt-br .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_6695e411_d4b7_4504_be8c_60fe6983f16b
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_6695e411_d4b7_4504_be8c_60fe6983f16b
 :OWLClass_6695e411_d4b7_4504_be8c_60fe6983f16b rdf:type owl:Class ;
+                                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/uses_language> ;
+                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                     owl:onClass :OWLClass_ab30d91b_4e2f_4475_a75b_80fc2ccbf30a
+                                                                   ] ;
                                                rdfs:subClassOf :OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Source Code"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_69060d19_5147_486e_8532_166bd50514ad
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_69060d19_5147_486e_8532_166bd50514ad
 :OWLClass_69060d19_5147_486e_8532_166bd50514ad rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_953402eb_02bb_4674_8040_9fa78fb631d2 ;
                                                owl:disjointWith :OWLClass_ca505c5c_324a_4b83_90c7_31789b96322e ;
@@ -242,7 +351,7 @@
                                                rdfs:label "Speaker"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_69a6c533_d567_47f9_8f19_4fd5fe41f221
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_69a6c533_d567_47f9_8f19_4fd5fe41f221
 :OWLClass_69a6c533_d567_47f9_8f19_4fd5fe41f221 rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 ;
@@ -257,28 +366,28 @@
                                                rdfs:label "Executable File"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_70d7810c_bb3f_42e9_9a09_131b9fd05f38
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_70d7810c_bb3f_42e9_9a09_131b9fd05f38
 :OWLClass_70d7810c_bb3f_42e9_9a09_131b9fd05f38 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_0ffb13d1_3dc1_40f5_b17a_c339270a6b44 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Desktop Computer"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_728b5b21_6739_4c48_9f07_0f496a4b9d3b
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_728b5b21_6739_4c48_9f07_0f496a4b9d3b
 :OWLClass_728b5b21_6739_4c48_9f07_0f496a4b9d3b rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationProcessingArtifact> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Peripheral Device"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_764a1446_8e06_49f1_872a_1edf9a8d5238
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_764a1446_8e06_49f1_872a_1edf9a8d5238
 :OWLClass_764a1446_8e06_49f1_872a_1edf9a8d5238 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Flash Drive"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5
 :OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5 rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
@@ -293,14 +402,14 @@
                                                rdfs:label "Software"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_7adfcdbc_d7be_478a_8dcc_22d171a530a5
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_7adfcdbc_d7be_478a_8dcc_22d171a530a5
 :OWLClass_7adfcdbc_d7be_478a_8dcc_22d171a530a5 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Optical Disk Drive"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_7b033d76_e905_4281_96d7_76c4bf6623ed
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_7b033d76_e905_4281_96d7_76c4bf6623ed
 :OWLClass_7b033d76_e905_4281_96d7_76c4bf6623ed rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
@@ -308,7 +417,7 @@
                                                           "Entidades de Processamento de Informações Digitais"@pt-br .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_7e89a2e3_6a0d_43af_95c9_dc6b9ba7c136
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_7e89a2e3_6a0d_43af_95c9_dc6b9ba7c136
 :OWLClass_7e89a2e3_6a0d_43af_95c9_dc6b9ba7c136 rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 ;
@@ -319,35 +428,52 @@
                                                rdfs:label "Text File"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_7fe9871c_c095_42a7_9d60_c75c9d732942
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_7fe9871c_c095_42a7_9d60_c75c9d732942
 :OWLClass_7fe9871c_c095_42a7_9d60_c75c9d732942 rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Digital File"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_80a43adc_5881_402a_9621_37b1d6cf17f5
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_80a43adc_5881_402a_9621_37b1d6cf17f5
 :OWLClass_80a43adc_5881_402a_9621_37b1d6cf17f5 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_ab30d91b_4e2f_4475_a75b_80fc2ccbf30a ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Programming  Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_8a21a2da_6c1e_4049_b54e_4d1f79af3599
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_8a21a2da_6c1e_4049_b54e_4d1f79af3599
 :OWLClass_8a21a2da_6c1e_4049_b54e_4d1f79af3599 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Text File Format"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_8b5b7cea_de69_456c_b66d_aae4af6be195
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_8a4fb032_ec8d_4608_a311_02f7fed17a0d
+:OWLClass_8a4fb032_ec8d_4608_a311_02f7fed17a0d rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :OWLObjectProperty_7f4c87f3_dda2_4a6e_8235_0e52d678a274 ;
+                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass <http://www.ontologyrepository.com/CommonCoreOntologies/DigitalStorageDevice>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :OWLObjectProperty_da530bfc_4e50_4b45_922a_9da5c3539390 ;
+                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass :OWLClass_cea1f41e_2b87_465f_a256_a3e3a583a1d0
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "File System"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_8b5b7cea_de69_456c_b66d_aae4af6be195
 :OWLClass_8b5b7cea_de69_456c_b66d_aae4af6be195 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Video File Format"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_8b7c3e09_8881_4a9e_b4fd_4cf98215c80a
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_8b7c3e09_8881_4a9e_b4fd_4cf98215c80a
 :OWLClass_8b7c3e09_8881_4a9e_b4fd_4cf98215c80a rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DigitalStorageDevice> ;
                                                owl:disjointWith :OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466 ;
@@ -355,21 +481,21 @@
                                                rdfs:label "Primary Storage Device"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_8d9bb02e_211b_4d8a_a9da_8d494394c381
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_8d9bb02e_211b_4d8a_a9da_8d494394c381
 :OWLClass_8d9bb02e_211b_4d8a_a9da_8d494394c381 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_8b7c3e09_8881_4a9e_b4fd_4cf98215c80a ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Random Access Memory"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_953402eb_02bb_4674_8040_9fa78fb631d2
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_953402eb_02bb_4674_8040_9fa78fb631d2
 :OWLClass_953402eb_02bb_4674_8040_9fa78fb631d2 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_728b5b21_6739_4c48_9f07_0f496a4b9d3b ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Output Device"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_999db36e_214a_4c2b_a312_d61f7af6a757
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_999db36e_214a_4c2b_a312_d61f7af6a757
 :OWLClass_999db36e_214a_4c2b_a312_d61f7af6a757 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_80a43adc_5881_402a_9621_37b1d6cf17f5 ;
                                                owl:disjointWith :OWLClass_e5e12005_20bb_434a_b578_fda8b8614359 ;
@@ -377,21 +503,14 @@
                                                rdfs:label "Low Level Programming Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5
 :OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5 rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactDesignContentEntity> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "File Format"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_9f204d2a_2075_435e_a96f_a2f3499040a1
-:OWLClass_9f204d2a_2075_435e_a96f_a2f3499040a1 rdf:type owl:Class ;
-                                               owl:disjointWith :OWLClass_ebb7e0c5_9452_483f_833e_f4cbae931f0c ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Interpreter"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_a1e90d03_122c_48ef_b85b_9dca1fcb9774
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_a1e90d03_122c_48ef_b85b_9dca1fcb9774
 :OWLClass_a1e90d03_122c_48ef_b85b_9dca1fcb9774 rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 ;
@@ -406,77 +525,97 @@
                                                rdfs:label "Audio File"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_a5b629a7_3b33_4595_abcb_0cfece8fe6c4
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_a5b629a7_3b33_4595_abcb_0cfece8fe6c4
 :OWLClass_a5b629a7_3b33_4595_abcb_0cfece8fe6c4 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_999db36e_214a_4c2b_a312_d61f7af6a757 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Assembly Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ab30d91b_4e2f_4475_a75b_80fc2ccbf30a
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ab30d91b_4e2f_4475_a75b_80fc2ccbf30a
 :OWLClass_ab30d91b_4e2f_4475_a75b_80fc2ccbf30a rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ArtificialLanguage> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Computer Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_abb395aa_e922_4e9b_b40f_09de6f491157
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_abb395aa_e922_4e9b_b40f_09de6f491157
 :OWLClass_abb395aa_e922_4e9b_b40f_09de6f491157 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_8b7c3e09_8881_4a9e_b4fd_4cf98215c80a ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Cache Memory"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ca505c5c_324a_4b83_90c7_31789b96322e
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ca505c5c_324a_4b83_90c7_31789b96322e
 :OWLClass_ca505c5c_324a_4b83_90c7_31789b96322e rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_953402eb_02bb_4674_8040_9fa78fb631d2 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Screen"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_cb944238_2873_4d1a_a3a2_626d309ce3db
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_cb944238_2873_4d1a_a3a2_626d309ce3db
 :OWLClass_cb944238_2873_4d1a_a3a2_626d309ce3db rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Hard Disk Drive"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ce04fbcc_da1a_420f_a923_16016d5fabd8
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ce04fbcc_da1a_420f_a923_16016d5fabd8
 :OWLClass_ce04fbcc_da1a_420f_a923_16016d5fabd8 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Executable File Format"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_d250687a_a59b_4b65_b2e5_9192060210d7
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_cea1f41e_2b87_465f_a256_a3e3a583a1d0
+:OWLClass_cea1f41e_2b87_465f_a256_a3e3a583a1d0 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_38618ae1_92a3_4573_84c4_aedad8ac072f ;
+                                               owl:disjointWith :OWLClass_ceef70c6_cc18_47be_b789_99f1dd4e1081 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Root Directory"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ceef70c6_cc18_47be_b789_99f1dd4e1081
+:OWLClass_ceef70c6_cc18_47be_b789_99f1dd4e1081 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_38618ae1_92a3_4573_84c4_aedad8ac072f ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :OWLObjectProperty_7f4c87f3_dda2_4a6e_8235_0e52d678a274 ;
+                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass :OWLClass_38618ae1_92a3_4573_84c4_aedad8ac072f
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Sub-directory"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_d250687a_a59b_4b65_b2e5_9192060210d7
 :OWLClass_d250687a_a59b_4b65_b2e5_9192060210d7 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_9b1224e5_ba89_4d9a_86a2_97db5eb759a5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Image File Format"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_d80871b6_bc94_4340_a5a8_f38a86b24fff
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_d80871b6_bc94_4340_a5a8_f38a86b24fff
 :OWLClass_d80871b6_bc94_4340_a5a8_f38a86b24fff rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_1ad5bf07_a598_4687_86c7_b312a0d07ebc ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Graphics Processing Unit"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_dab84e9a_cdd3_4520_a426_1407b93757fb
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_dab84e9a_cdd3_4520_a426_1407b93757fb
 :OWLClass_dab84e9a_cdd3_4520_a426_1407b93757fb rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_0c19d2d5_b5d4_4de2_bb14_504562d4ffb4 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Keyboard"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_df75176c_66ac_4122_8b42_93d906d95c17
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_df75176c_66ac_4122_8b42_93d906d95c17
 :OWLClass_df75176c_66ac_4122_8b42_93d906d95c17 rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Audio"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_e51d6143_76eb_427c_9f1f_1b4cffe8c0c3
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_e51d6143_76eb_427c_9f1f_1b4cffe8c0c3
 :OWLClass_e51d6143_76eb_427c_9f1f_1b4cffe8c0c3 rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 ;
@@ -491,20 +630,14 @@
                                                rdfs:label "Image File"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_e5e12005_20bb_434a_b578_fda8b8614359
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_e5e12005_20bb_434a_b578_fda8b8614359
 :OWLClass_e5e12005_20bb_434a_b578_fda8b8614359 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_80a43adc_5881_402a_9621_37b1d6cf17f5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "High Level Programming Language"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_e7d2a39c_4cc8_41e3_943c_f5d100950398
-:OWLClass_e7d2a39c_4cc8_41e3_943c_f5d100950398 rdf:type owl:Class ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Source CodeFile Format"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_e8faf61c_075a_4447_b88e_da9b2472a6f9
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_e8faf61c_075a_4447_b88e_da9b2472a6f9
 :OWLClass_e8faf61c_075a_4447_b88e_da9b2472a6f9 rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 ;
@@ -519,13 +652,7 @@
                                                rdfs:label "Video File"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ebb7e0c5_9452_483f_833e_f4cbae931f0c
-:OWLClass_ebb7e0c5_9452_483f_833e_f4cbae931f0c rdf:type owl:Class ;
-                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                               rdfs:label "Compiler"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_f874e889_ef71_4ac3_86c3_ae8f4c0ec416
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_f874e889_ef71_4ac3_86c3_ae8f4c0ec416
 :OWLClass_f874e889_ef71_4ac3_86c3_ae8f4c0ec416 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
@@ -533,21 +660,21 @@
                                                           "Software de Aplicação"@pt-br .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466
 :OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466 rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DigitalStorageDevice> ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Secondary Storage Device"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_fd227b18_d8f1_4b4f_8ac5_39fa89c51eda
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_fd227b18_d8f1_4b4f_8ac5_39fa89c51eda
 :OWLClass_fd227b18_d8f1_4b4f_8ac5_39fa89c51eda rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_8b7c3e09_8881_4a9e_b4fd_4cf98215c80a ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Processor Register"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ff87c428_e453_495a_aa4f_7696968c2aaf
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ff87c428_e453_495a_aa4f_7696968c2aaf
 :OWLClass_ff87c428_e453_495a_aa4f_7696968c2aaf rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_8a21a2da_6c1e_4049_b54e_4d1f79af3599 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
@@ -558,70 +685,70 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_423c7cc6_0feb_48c6_90b4_bcafd06d7831
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_423c7cc6_0feb_48c6_90b4_bcafd06d7831
 :OWLNamedIndividual_423c7cc6_0feb_48c6_90b4_bcafd06d7831 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "Bash"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_6140686e_e71a_4481_a2fc_9bbfdbc195f0
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_6140686e_e71a_4481_a2fc_9bbfdbc195f0
 :OWLNamedIndividual_6140686e_e71a_4481_a2fc_9bbfdbc195f0 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "C"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7
 :OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "Python"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_73f346b5_9c89_4409_a026_37c641a9ab7a
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_73f346b5_9c89_4409_a026_37c641a9ab7a
 :OWLNamedIndividual_73f346b5_9c89_4409_a026_37c641a9ab7a rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "Lua"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_7b5ebedf_b059_4e14_b7e0_b9eb5664513d
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_7b5ebedf_b059_4e14_b7e0_b9eb5664513d
 :OWLNamedIndividual_7b5ebedf_b059_4e14_b7e0_b9eb5664513d rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_0d411739_d3c3_4ff1_bb25_64bfe4b21158 ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "HTML"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_80748901_76c2_447c_82ad_342499ec7412
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_80748901_76c2_447c_82ad_342499ec7412
 :OWLNamedIndividual_80748901_76c2_447c_82ad_342499ec7412 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "Rust"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_91d85e54_4671_4fc3_bae7_1a44f09843b8
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_91d85e54_4671_4fc3_bae7_1a44f09843b8
 :OWLNamedIndividual_91d85e54_4671_4fc3_bae7_1a44f09843b8 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "Go"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_a95b36c2_b35b_43ad_94b3_77f3f91d50de
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_a95b36c2_b35b_43ad_94b3_77f3f91d50de
 :OWLNamedIndividual_a95b36c2_b35b_43ad_94b3_77f3f91d50de rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "C#"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_bb089a4b_6bbe_4d43_a143_e7986870bc1c
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_bb089a4b_6bbe_4d43_a143_e7986870bc1c
 :OWLNamedIndividual_bb089a4b_6bbe_4d43_a143_e7986870bc1c rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "Java"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_cddcdd3b_e253_4c94_ab05_d76bd3629cd9
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_cddcdd3b_e253_4c94_ab05_d76bd3629cd9
 :OWLNamedIndividual_cddcdd3b_e253_4c94_ab05_d76bd3629cd9 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
@@ -654,6 +781,14 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :OWLClass_1f5fee26_0ce1_4aa0_be58_aa48fca2b42e
+                :OWLClass_63e351a2_8926_47c3_99b6_8c017f653310
+                :OWLClass_dab84e9a_cdd3_4520_a426_1407b93757fb
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :OWLClass_1f773bbe_ea19_44f1_a003_6943dec33427
                 :OWLClass_764a1446_8e06_49f1_872a_1edf9a8d5238
                 :OWLClass_7adfcdbc_d7be_478a_8dcc_22d171a530a5
@@ -668,6 +803,14 @@
                 :OWLClass_8b5b7cea_de69_456c_b66d_aae4af6be195
                 :OWLClass_ce04fbcc_da1a_420f_a923_16016d5fabd8
                 :OWLClass_d250687a_a59b_4b65_b2e5_9192060210d7
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :OWLClass_38618ae1_92a3_4573_84c4_aedad8ac072f
+                :OWLClass_7fe9871c_c095_42a7_9d60_c75c9d732942
+                :OWLClass_8a4fb032_ec8d_4608_a311_02f7fed17a0d
               )
 ] .
 
