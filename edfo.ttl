@@ -10,6 +10,7 @@
                                                          owl:versionIRI <http://www.semanticweb.org/ana/ontologies/2024/7/edfo/0.1> ;
                                                          owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-02-14/AgentOntology> ,
                                                                      <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-02-14/ArtifactOntology> ,
+                                                                     <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-02-14/EventOntology> ,
                                                                      <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2024-02-14/InformationEntityOntology> ;
                                                          rdfs:label "Experimental Digital Forensics Ontology"@en ,
                                                                     "Ontologia para Forense Digital Experimental"@pt-br .
@@ -90,12 +91,229 @@
                                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_0169c1b9_ac86_45d3_bad3_630606566178
+:OWLClass_0169c1b9_ac86_45d3_bad3_630606566178 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_1a33d14c_ac12_40d7_a5f7_b7100b184077 ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
+                                                                 owl:someValuesFrom :OWLClass_ec993cdb_1dc9_4a74_a659_77491a396932
+                                                               ] ;
+                                               owl:disjointWith :OWLClass_6f623ff9_97a1_4045_9f1f_f2e4f54ba7d7 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experiment Operation"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_03927863_2c3c_4665_a22e_591f931b4ca2
+:OWLClass_03927863_2c3c_4665_a22e_591f931b4ca2 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/PlanSpecification> ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experiment Plan"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_131a7c2e_5d98_45c3_958f_72171562ebbf
+:OWLClass_131a7c2e_5d98_45c3_958f_72171562ebbf rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6 ;
+                                               owl:disjointWith :OWLClass_81b0a652_97ec_461f_b1c4_f92a65364b76 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Replication Experiment"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_1a33d14c_ac12_40d7_a5f7_b7100b184077
+:OWLClass_1a33d14c_ac12_40d7_a5f7_b7100b184077 rdf:type owl:Class ;
+                                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                                     owl:someValuesFrom :OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6
+                                                                   ] ;
+                                               rdfs:subClassOf :OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experiment Phase"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_2af45ba1_761c_41bc_a7c1_aead03f2ae4e
+:OWLClass_2af45ba1_761c_41bc_a7c1_aead03f2ae4e rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_673791a5_9dfd_498f_bf2c_c216ae542fe1 ;
+                                               owl:disjointWith :OWLClass_630081a8_4089_452e_900c_4322cc8c3134 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Independent Variable"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_2f88c454_8573_460f_88cb_60801ea0f0e6
+:OWLClass_2f88c454_8573_460f_88cb_60801ea0f0e6 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_7f91e635_49b2_4a7b_bc41_efe97fbc6c22 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Control"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6
+:OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experiment"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_30a1995c_964f_4fa7_8813_674f8d95ac21
+:OWLClass_30a1995c_964f_4fa7_8813_674f8d95ac21 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_2f88c454_8573_460f_88cb_60801ea0f0e6 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Neutral Control"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_630081a8_4089_452e_900c_4322cc8c3134
+:OWLClass_630081a8_4089_452e_900c_4322cc8c3134 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_673791a5_9dfd_498f_bf2c_c216ae542fe1 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Dependent Variable"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_6441309b_c53d_451e_87c5_0f9b9877804d
+:OWLClass_6441309b_c53d_451e_87c5_0f9b9877804d rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_9043c42a_bc9e_4265_984b_6994264971c2 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experimental Unit"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_673791a5_9dfd_498f_bf2c_c216ae542fe1
+:OWLClass_673791a5_9dfd_498f_bf2c_c216ae542fe1 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass <http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity>
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Variable"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_6f623ff9_97a1_4045_9f1f_f2e4f54ba7d7
+:OWLClass_6f623ff9_97a1_4045_9f1f_f2e4f54ba7d7 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_1a33d14c_ac12_40d7_a5f7_b7100b184077 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experiment Pre-operation"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_7f91e635_49b2_4a7b_bc41_efe97fbc6c22
+:OWLClass_7f91e635_49b2_4a7b_bc41_efe97fbc6c22 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_9043c42a_bc9e_4265_984b_6994264971c2 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Treatment"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_81b0a652_97ec_461f_b1c4_f92a65364b76
+:OWLClass_81b0a652_97ec_461f_b1c4_f92a65364b76 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Original Experiment"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_9043c42a_bc9e_4265_984b_6994264971c2
+:OWLClass_9043c42a_bc9e_4265_984b_6994264971c2 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experimental Role"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_92096fdb_b261_4e27_9049_fbfdb529f88e
+:OWLClass_92096fdb_b261_4e27_9049_fbfdb529f88e rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_9043c42a_bc9e_4265_984b_6994264971c2 ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                                 owl:allValuesFrom :OWLClass_6441309b_c53d_451e_87c5_0f9b9877804d
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experimental Group"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_d14322f5_fb1a_48ce_9bfc_59e059df7e1f
+:OWLClass_d14322f5_fb1a_48ce_9bfc_59e059df7e1f rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_2af45ba1_761c_41bc_a7c1_aead03f2ae4e ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experimental Factor"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_dbdf36c1_f22d_4612_b1cf_791ab5815474
+:OWLClass_dbdf36c1_f22d_4612_b1cf_791ab5815474 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPlanning> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                                 owl:someValuesFrom :OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/has_output> ;
+                                                                 owl:someValuesFrom :OWLClass_03927863_2c3c_4665_a22e_591f931b4ca2
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experiment Planning"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_e0a28cf4_851a_4dbe_b4ee_4d52e5398bc3
+:OWLClass_e0a28cf4_851a_4dbe_b4ee_4d52e5398bc3 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommunication> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                                 owl:someValuesFrom :OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experiment Dissemination"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ead540a9_7b24_411f_aeb6_0d89ab6966d2
+:OWLClass_ead540a9_7b24_411f_aeb6_0d89ab6966d2 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfObservation> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                                 owl:someValuesFrom :OWLClass_309d8a25_de6a_4b90_9168_cfcef9dc9aa6
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Experiment Analysis"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_ec993cdb_1dc9_4a74_a659_77491a396932
+:OWLClass_ec993cdb_1dc9_4a74_a659_77491a396932 rdf:type owl:Class ;
+                                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000055> ;
+                                                                     owl:someValuesFrom :OWLClass_7f91e635_49b2_4a7b_bc41_efe97fbc6c22
+                                                                   ] ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Treatment Application"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_f1d7ee17_476a_4641_8348_578c029ee874
+:OWLClass_f1d7ee17_476a_4641_8348_578c029ee874 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_2f88c454_8573_460f_88cb_60801ea0f0e6 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Negative Control"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLClass_fba55ce1_1269_4fbc_9d36_5b69a0fed68a
+:OWLClass_fba55ce1_1269_4fbc_9d36_5b69a0fed68a rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_2f88c454_8573_460f_88cb_60801ea0f0e6 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Positive Control"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa
 :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_e5e12005_20bb_434a_b578_fda8b8614359 ;
                                                owl:disjointWith :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Interpreted Language"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_034923cb_0a58_4cc8_8b9a_9a958fc563b9
+:OWLClass_034923cb_0a58_4cc8_8b9a_9a958fc563b9 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_a2ddb521_947f_4b3e_9512_616affecd90e ;
+                                               owl:disjointWith :OWLClass_f40ac462_67b0_408c_8ac8_3289c1074227 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Software Execution"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0a159b75_37d5_4209_a4f7_52fd1bbae660
+:OWLClass_0a159b75_37d5_4209_a4f7_52fd1bbae660 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_88d3059f_00dc_4656_94f8_9978833d7f84 ;
+                                               owl:disjointWith :OWLClass_3c6692df_f236_4f82_b6d9_0949a625c7dd ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Conclusion"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_0a5fa281_7520_4b8b_adb3_4ad579daa62d
@@ -139,15 +357,21 @@
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_15cd4ac3_4d0c_418a_a56e_dbcdfb98e288
 :OWLClass_15cd4ac3_4d0c_418a_a56e_dbcdfb98e288 rdf:type owl:Class ;
-                                               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/uses_language> ;
-                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                     owl:onClass :OWLClass_52480b4f_6793_426f_ac2b_89cb0101fd59
-                                                                   ] ;
                                                rdfs:subClassOf :OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2 ;
                                                owl:disjointWith :OWLClass_6695e411_d4b7_4504_be8c_60fe6983f16b ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Executable Code"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_1706b770_2444_44df_b16d_572ca3a038b0
+:OWLClass_1706b770_2444_44df_b16d_572ca3a038b0 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_869a57e7_6a0d_4ea7_9a5a_1b71805361c2 ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                                 owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/ProperName>
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Author List"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_1ad5bf07_a598_4687_86c7_b312a0d07ebc
@@ -178,11 +402,25 @@
                                                rdfs:label "Solid State Drive"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_2315d40e_dd5e_4832_a9b6_6f5c38ecf4d6
+:OWLClass_2315d40e_dd5e_4832_a9b6_6f5c38ecf4d6 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_39508c86_e0f5_44bc_b259_88e3646656d7 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Data Encryption"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72
 :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_e5e12005_20bb_434a_b578_fda8b8614359 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Compiled Language"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_2adf0e64_3398_43b8_ab72_82afd36dc3bc
+:OWLClass_2adf0e64_3398_43b8_ab72_82afd36dc3bc rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Document"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_2da515ab_d942_429d_90a4_4dc32b59c952
@@ -207,6 +445,14 @@
                                                rdfs:label "Directory"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_39508c86_e0f5_44bc_b259_88e3646656d7
+:OWLClass_39508c86_e0f5_44bc_b259_88e3646656d7 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_f40ac462_67b0_408c_8ac8_3289c1074227 ;
+                                               owl:disjointWith :OWLClass_c201442c_a54b_4b04_959f_faf8b25ecf44 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Data Encoding"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2
 :OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_7b033d76_e905_4281_96d7_76c4bf6623ed ;
@@ -216,6 +462,20 @@
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Code"@en ,
                                                           "Código"@pt-br .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_3c6692df_f236_4f82_b6d9_0949a625c7dd
+:OWLClass_3c6692df_f236_4f82_b6d9_0949a625c7dd rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_88d3059f_00dc_4656_94f8_9978833d7f84 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Introduction"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_3e8a60ef_6094_48c6_972a_d42fe3d34c1e
+:OWLClass_3e8a60ef_6094_48c6_972a_d42fe3d34c1e rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_2adf0e64_3398_43b8_ab72_82afd36dc3bc ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Publication"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_407c2e84_ddd0_4376_8ccc_7cd3a09c46ed
@@ -229,6 +489,10 @@
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_422c499f_a8c8_4bc3_904d_d33052f8864a
 :OWLClass_422c499f_a8c8_4bc3_904d_d33052f8864a rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/uses_language> ;
+                                                                     owl:someValuesFrom :OWLClass_80a43adc_5881_402a_9621_37b1d6cf17f5
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 ;
                                                                      owl:someValuesFrom :OWLClass_ff87c428_e453_495a_aa4f_7696968c2aaf
                                                                    ] ;
@@ -239,6 +503,24 @@
                                                                ] ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Source Code File"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_469fd140_fe16_4332_af8a_b35be088e67e
+:OWLClass_469fd140_fe16_4332_af8a_b35be088e67e rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_869a57e7_6a0d_4ea7_9a5a_1b71805361c2 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Abstract"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_49a52b89_2bc0_4864_8415_23576800a90a
+:OWLClass_49a52b89_2bc0_4864_8415_23576800a90a rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/designates> ;
+                                                                 owl:someValuesFrom :OWLClass_38618ae1_92a3_4573_84c4_aedad8ac072f
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Directory Name"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_4a25ecb2_062a_420f_9b25_ce01907d7631
@@ -291,11 +573,6 @@
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_6695e411_d4b7_4504_be8c_60fe6983f16b
 :OWLClass_6695e411_d4b7_4504_be8c_60fe6983f16b rdf:type owl:Class ;
-                                               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/uses_language> ;
-                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                     owl:onClass :OWLClass_ab30d91b_4e2f_4475_a75b_80fc2ccbf30a
-                                                                   ] ;
                                                rdfs:subClassOf :OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Source Code"@en .
@@ -312,6 +589,10 @@
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_69a6c533_d567_47f9_8f19_4fd5fe41f221
 :OWLClass_69a6c533_d567_47f9_8f19_4fd5fe41f221 rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/uses_language> ;
+                                                                     owl:someValuesFrom :OWLClass_52480b4f_6793_426f_ac2b_89cb0101fd59
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :OWLObjectProperty_3a5c89eb_a523_4993_9b0d_4ed5470c8a72 ;
                                                                      owl:someValuesFrom :OWLClass_ce04fbcc_da1a_420f_a923_16016d5fabd8
                                                                    ] ;
@@ -356,10 +637,6 @@
 :OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5 rdf:type owl:Class ;
                                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
-                                                                     owl:someValuesFrom :OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
                                                                      owl:allValuesFrom :OWLClass_3bfd83e7_9149_4eb1_a245_fe2a55ffafd2
                                                                    ] ;
                                                rdfs:subClassOf :OWLClass_7b033d76_e905_4281_96d7_76c4bf6623ed ;
@@ -395,7 +672,11 @@
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_7fe9871c_c095_42a7_9d60_c75c9d732942
 :OWLClass_7fe9871c_c095_42a7_9d60_c75c9d732942 rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact> ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :OWLObjectProperty_7f4c87f3_dda2_4a6e_8235_0e52d678a274 ;
+                                                                 owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/DigitalStorageDevice>
+                                                               ] ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Digital File"@en .
 
@@ -405,6 +686,20 @@
                                                rdfs:subClassOf :OWLClass_ab30d91b_4e2f_4475_a75b_80fc2ccbf30a ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Programming  Language"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_869a57e7_6a0d_4ea7_9a5a_1b71805361c2
+:OWLClass_869a57e7_6a0d_4ea7_9a5a_1b71805361c2 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Document Part"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_88d3059f_00dc_4656_94f8_9978833d7f84
+:OWLClass_88d3059f_00dc_4656_94f8_9978833d7f84 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_869a57e7_6a0d_4ea7_9a5a_1b71805361c2 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Document Section"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_8a21a2da_6c1e_4049_b54e_4d1f79af3599
@@ -429,6 +724,17 @@
                                                                ] ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "File System"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_8b43e1a3_0a53_4b5a_8910_ed67788c75f3
+:OWLClass_8b43e1a3_0a53_4b5a_8910_ed67788c75f3 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/designates> ;
+                                                                 owl:someValuesFrom :OWLClass_7fe9871c_c095_42a7_9d60_c75c9d732942
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "File Name"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_8b5b7cea_de69_456c_b66d_aae4af6be195
@@ -490,6 +796,13 @@
                                                rdfs:label "Audio File"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_a2ddb521_947f_4b3e_9512_616affecd90e
+:OWLClass_a2ddb521_947f_4b3e_9512_616affecd90e rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/MechanicalProcess> ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Digital Process"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_a5b629a7_3b33_4595_abcb_0cfece8fe6c4
 :OWLClass_a5b629a7_3b33_4595_abcb_0cfece8fe6c4 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_999db36e_214a_4c2b_a312_d61f7af6a757 ;
@@ -518,6 +831,24 @@
                                                rdfs:label "Virus"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_c201442c_a54b_4b04_959f_faf8b25ecf44
+:OWLClass_c201442c_a54b_4b04_959f_faf8b25ecf44 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_f40ac462_67b0_408c_8ac8_3289c1074227 ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Data Copying"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_c33e9920_bd5a_409d_8f44_cbb31871b60e
+:OWLClass_c33e9920_bd5a_409d_8f44_cbb31871b60e rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationProcessingArtifact> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                 owl:someValuesFrom :OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Program Process"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ca505c5c_324a_4b83_90c7_31789b96322e
 :OWLClass_ca505c5c_324a_4b83_90c7_31789b96322e rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_953402eb_02bb_4674_8040_9fa78fb631d2 ;
@@ -530,6 +861,17 @@
                                                rdfs:subClassOf :OWLClass_fc2d958c_be1e_4fa8_8d66_b2e4efec1466 ;
                                                <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                rdfs:label "Hard Disk Drive"@en .
+
+
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_cd298417_93ce_4efd_bc53_30de4e524000
+:OWLClass_cd298417_93ce_4efd_bc53_30de4e524000 rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ProperName> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/designates> ;
+                                                                 owl:someValuesFrom :OWLClass_2adf0e64_3398_43b8_ab72_82afd36dc3bc
+                                                               ] ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Document Title"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_ce04fbcc_da1a_420f_a923_16016d5fabd8
@@ -652,6 +994,13 @@
                                                rdfs:label "Worm"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_f40ac462_67b0_408c_8ac8_3289c1074227
+:OWLClass_f40ac462_67b0_408c_8ac8_3289c1074227 rdf:type owl:Class ;
+                                               rdfs:subClassOf :OWLClass_a2ddb521_947f_4b3e_9512_616affecd90e ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                               rdfs:label "Data Processing"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLClass_f874e889_ef71_4ac3_86c3_ae8f4c0ec416
 :OWLClass_f874e889_ef71_4ac3_86c3_ae8f4c0ec416 rdf:type owl:Class ;
                                                rdfs:subClassOf :OWLClass_7adc92dc_cd65_4833_b4f2_8cdb114239d5 ;
@@ -685,15 +1034,6 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo#OWLNamedIndividual_51ef52d4_b4cd_4316_a6ba_69ae1e1e1a98
-:OWLNamedIndividual_51ef52d4_b4cd_4316_a6ba_69ae1e1e1a98 rdf:type owl:NamedIndividual ,
-                                                                  :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
-                                                         <http://purl.obolibrary.org/obo/BFO_0000115> :OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7 ,
-                                                                                                      :OWLNamedIndividual_ebdf5913_54d0_4a47_97ff_7f11b7813061 ;
-                                                         <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                                         rdfs:label "Python"@en .
-
-
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_423c7cc6_0feb_48c6_90b4_bcafd06d7831
 :OWLNamedIndividual_423c7cc6_0feb_48c6_90b4_bcafd06d7831 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
@@ -701,18 +1041,18 @@
                                                          rdfs:label "Bash"@en .
 
 
+###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_51ef52d4_b4cd_4316_a6ba_69ae1e1e1a98
+:OWLNamedIndividual_51ef52d4_b4cd_4316_a6ba_69ae1e1e1a98 rdf:type owl:NamedIndividual ,
+                                                                  :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
+                                                         <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
+                                                         rdfs:label "Python"@en .
+
+
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_6140686e_e71a_4481_a2fc_9bbfdbc195f0
 :OWLNamedIndividual_6140686e_e71a_4481_a2fc_9bbfdbc195f0 rdf:type owl:NamedIndividual ,
                                                                   :OWLClass_2ab4e595_366c_4fb3_8a2d_e23a5c023b72 ;
                                                          <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
                                                          rdfs:label "C"@en .
-
-
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7
-:OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7 rdf:type owl:NamedIndividual ,
-                                                                  :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
-                                                         <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                                         rdfs:label "Python 2"@en .
 
 
 ###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_73f346b5_9c89_4409_a026_37c641a9ab7a
@@ -764,14 +1104,6 @@
                                                          rdfs:label "C++"@en .
 
 
-###  http://www.semanticweb.org/ana/ontologies/2024/7/edfo/OWLNamedIndividual_ebdf5913_54d0_4a47_97ff_7f11b7813061
-:OWLNamedIndividual_ebdf5913_54d0_4a47_97ff_7f11b7813061 rdf:type owl:NamedIndividual ,
-                                                                  :OWLClass_0053f65e_d3f6_4288_84d8_10f431acb3fa ;
-                                                         <http://www.ontologyrepository.com/CommonCoreOntologies/is_successor_of> :OWLNamedIndividual_6fe866ef_e611_4931_bef5_e5f3cfdeaca7 ;
-                                                         <http://purl.org/dc/elements/1.1/creator> "Ana Mazur" ;
-                                                         rdfs:label "Python 3"@en .
-
-
 #################################################################
 #    General axioms
 #################################################################
@@ -792,7 +1124,25 @@
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( <http://www.ontologyrepository.com/CommonCoreOntologies/Image>
                 <http://www.ontologyrepository.com/CommonCoreOntologies/Video>
+                :OWLClass_2adf0e64_3398_43b8_ab72_82afd36dc3bc
+                :OWLClass_869a57e7_6a0d_4ea7_9a5a_1b71805361c2
                 :OWLClass_df75176c_66ac_4122_8b42_93d906d95c17
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.ontologyrepository.com/CommonCoreOntologies/Image>
+                <http://www.ontologyrepository.com/CommonCoreOntologies/Video>
+                :OWLClass_df75176c_66ac_4122_8b42_93d906d95c17
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :OWLClass_30a1995c_964f_4fa7_8813_674f8d95ac21
+                :OWLClass_f1d7ee17_476a_4641_8348_578c029ee874
+                :OWLClass_fba55ce1_1269_4fbc_9d36_5b69a0fed68a
               )
 ] .
 
